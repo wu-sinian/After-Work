@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>信息统计表</title>
+		<style>
+			table {
+				border: 1px solid royalblue;
+				background-color: rgb(247,243,247);
+			}
+
+			table tr th {
+				background-color: rgb(156, 207, 255);
+				color: red;
+				padding: 10px;
+			}
+			table tr td{
+				border-top: 1px solid white;
+				border-left:1px solid white;
+			}
+			button,input {
+				box-shadow: inset 0 1px white,
+				inset 0 -1px #ccc,
+				inset -1px 0 #d7d7d7,
+				inset 1px 0 #d7d7d7; ;
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+			<table>
+				<tr>
+					<th colspan="2">信 息 统 计 表</th>
+				</tr>
+				<tr>
+					<td>姓名：</td>
+					<td><input type="text" name="name" /></td>
+				</tr>
+				<tr>
+					<td>年龄：</td>
+					<td><input type="text" name="age" /></td>
+				</tr>
+				<tr>
+					<td>性别：</td>
+					<td>
+						<input type="radio" checked name="sex" value="male">男<input type="radio" name="sex" value="female">女
+					</td>
+				</tr>
+				<tr>
+					<td>爱好：</td>
+					<td>
+						<input type="checkbox" />旅游<br />
+						<input type="checkbox" />登山<br />
+						<input type="checkbox" />健身<br />
+						<input type="checkbox" />上网<br />
+						<input type="checkbox" />游泳<br />
+					</td>
+				</tr>
+				<tr>
+					<td>学历：</td>
+					<td>
+						<select>
+						<option style="display: none;">--请选择--</option>
+						<option>专科</option>
+						<option>本科</option>
+						<option>硕士研究生</option>
+						<option>博士研究生</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>自我介绍：</td>
+					<td><textarea style="height: 100px;" onfocus="if(value=='自我介绍：') {value=''}">自我介绍：</textarea></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<button type="submit">提交</button>
+						<button type="reset">重置</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+
+	</body>
+</html>
