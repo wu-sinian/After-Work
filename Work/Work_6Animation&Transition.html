@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Animation动画</title>
+		<style>
+			#duration{
+				width: 100px;
+				height: 100px;
+				position: relative;
+				animation:move infinite;
+				animation-duration: 5s;
+			}
+			@keyframes move{
+				0%{background-color: red;border: 5px solid firebrick;top:0px;left: 0px;}
+				25%{background-color: yellow;border: 5px solid firebrick;top:0px;left: 200px;}
+				50%{background-color: green;border: 5px solid firebrick;left: 200px;top: 200px;}
+				75%{background-color: purple;border: 5px solid firebrick;left: 0px;top: 200px;}
+				100%{background-color: red;border: 5px solid firebrick;left: 0px;top: 0px;}
+			}
+			#first,#last{
+				position: relative;
+				top: 200px;
+				width: 50px;
+				height: 50px;
+				background-color: aqua;
+				transition: 2s;
+			}
+			#first:hover{
+				width: 150px;
+				background-color: red;
+			}
+			#last:hover{
+				width: 200px;
+				background-color: beige;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="duration"></div>
+		<div id="first">首页</div><br />
+		<div id="last">页脚</div>
+	</body>
+</html>
