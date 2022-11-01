@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>文本复制</title>
+	</head>
+	<body>
+		<div>
+			<input type="text" id="text" placeholder="请输入想复制的文本内容" value="" />
+			<input type="button" onclick="Copy()" value="复制" />
+			<input type="text" id="text_copy" placeholder="复制的内容" value="" />
+			<p id="p" style="display: none;color: aqua;font-weight: bold;">复制成功！</p>
+		</div>
+		<script type="text/javascript">
+			function Copy(){
+				//获取文本内容
+				var text = document.getElementById("text");
+				var text_copy = document.getElementById("text_copy");
+				var p = document.getElementById("p");
+				if(text.value==""){
+					alert("未输入文本内容，复制失败")
+				}
+				else{
+					text_copy.value = text.value;
+					p.style.display="block"
+				}
+			}
+		</script>
+	</body>
+</html>
