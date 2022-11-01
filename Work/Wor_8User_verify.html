@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册页面验证</title>
+		<style>
+			#form{
+				width: 350px;
+				height: 300px;
+				margin: 0px auto;
+				text-align: center;
+				border: 1px solid lightgray;
+				background-color: rgb(245,245,245);
+			}
+			input{
+				display: block;
+				margin-top: 30px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div id="form">
+			<p style="border-bottom: 1px solid lightgray;font-size: 20px;font-weight: bold;">新用户注册</p>
+			<form style="margin:0px 95px;">
+				<input type="text" id="name" placeholder="请输入用户名" />
+				<input type="password" id="pwd" placeholder="请输入密码" />
+				<input type="password" id="password_text" placeholder="请再一次输入密码" />
+				<input type="button" onclick="verify()" value="提交验证" style="margin-left: 50px;"/>
+			</form>
+		</div>
+		<script type="text/javascript">
+			//cookie：name,value,url
+			function verify(){
+				var name = document.getElementById("name").value;
+				var pwd = document.getElementById("pwd").value;
+				var pwd2 = document.getElementById("password_text").value;
+				//用户名验证
+				if(name==""||name==null){
+					alert("用户名不能为空！");
+					return false;
+				}
+				else{
+					//密码验证
+					if(pwd.length<6){
+						alert("密码不能少于6位，请重新输入！");
+						return false;
+					}
+					else{
+						if(pwd!=pwd2){
+							alert("前后密码不一致，请检查后输入！");
+							return false;
+						}
+						else{
+							alert("信息验证成功！")
+							return true;
+						}
+					}
+				}
+				
+			}
+		</script>
+	</body>
+</html>
