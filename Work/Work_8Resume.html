@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数据效验</title>
+	</head>
+	<body>
+		<form>
+			姓名：<input type="text" id="name" placeholder="请输入你的姓名......" /><br /><br />
+			密码：<input type="password" id="pwd" placeholder="请输入你的密码......" /><br /><br />
+			性别：<input id="man" type="radio"/><img src="img/man.jpeg" />男士<input id="woman" type="radio"/><img src="img/woman.jpeg" />女士<br /><br />
+			血型：<input type="radio" id="bloodO" />O<input type="radio" id="bloodA" />A<input type="radio" id="bloodB" />B<input type="radio" id="bloodAB" />AB<br /><br />
+			性格：<input type="checkbox" id="hot" />热情大方<input type="checkbox" id="soft" />温柔体贴<input type="checkbox" id="emotion" />多情善感<br /><br />
+			文件：<input type="file" /><br /><br />
+			个人介绍：<br />
+			<textarea style="width: 250px;height: 100px;" placeholder="请输入你的个人介绍......"></textarea><br /><br />
+			城市：
+			<select>
+				<option>北京市</option>
+				<option>上海市</option>
+				<option>广州市</option>
+				<option>成都市</option>
+			</select>
+			<br /><br />
+			<input type="button" onclick="up()" value="提交"   />&nbsp;<input type="reset" value="重新输入" />	
+		</form>
+	</body>
+	<script type="text/javascript">
+		function up(){
+			if(document.getElementById("name").value==""){
+				alert("请输入姓名")
+			}
+			else{
+				if(document.getElementById("pwd").value==""){
+					alert("请输入密码")
+				}
+				else{
+					if(!(document.getElementById("man").checked || document.getElementById("woman").checked)){
+						alert("性别未选择，请选择性别")
+					}
+					else{
+						if(!(document.getElementById("bloodO").checked || document.getElementById("bloodA").checked) || document.getElementById("bloodB").checked || document.getElementById("bloodAB").checked){
+							alert("血型未选择，请选择血型")
+						}
+						else{
+							if(!(document.getElementById("hot").checked || document.getElementById("soft").checked) || document.getElementById("emotion").checked){
+								alert("性格未选中，请选择性格")
+							}
+							else{
+								alert("数据验证成功")
+							}
+						}
+					}
+				}
+			}
+		}
+		
+	</script>
+</html>
